@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+      integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>André Almeida</title>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <img src="imagens/logo_size.jpg" alt="Logo André" />
+      </div>
+      <ul id="menu-tela-grande">
+        <li>
+          <a target="_black" href="https://github.com/andrenaza/">github</a>
+        </li>
+        <li>
+          <a target="_black" href="mailto:andrenaza@gmail.com">e-mail</a>
+        </li>
+        <li>
+          <a target="_black" href="https://wa.me/+5521994537003">text me maybe</a>
+        </li>
+      </ul>
+
+      <ul id="menu-tela-pequena">
+        <li>
+          <a target="_black" href="https://github.com/andrenaza/">github</a>
+        </li>
+        <li>
+          <a target="_black" href="mailto:andrenaza@gmail.com">e-mail</a>
+        </li>
+        <li>
+          <a target="_black" href="https://wa.me/+5521994537003">text me maybe</a>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <section class="container">
+        <div class="name">
+            <h1>André Almeida</h1>
+            <h5>Dev Full Stack</h5>
+        </div>
+
+        <div onclick="displayAbout()" id="arrow">
+          <i id="animation" class="fas fa-sort-down"></i>
+        </div>
+        <div style="display: none;" id="about">
+          <p>
+            Sou formado em Comunicação Social e há 10 anos atuo na área. No
+            momento, estudo desenvolvimento web full stack, passando por HTML,
+            CSS e JS, tendo também grande interesse em POO, .NET e C#. Minhas
+            experiências profissionais passam por criação textual, elaboração de
+            planejamentos, gestão de redes sociais para diversos segmentos como
+            automobilística, moda infantil, energia e saúde pública, destacando
+            o projeto Saúde É Meu Lugar, que realizei para a Fiocruz.
+            Atualmente, trabalho como Product Owner na Lumis.
+          </p>
+        </div>
+        <div class="form">
+          <div>
+            <p>deixe seu contato!</p>
+          </div>
+          <form action="">
+            <input type="email" placeholder="digite seu e-mail" />
+            <button>enviar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script>
+        function displayAbout(){
+            var arrow = document.getElementById('animation');
+            arrow.classList.toggle('rotate');
+            var display = document.getElementById('about');
+            display.classList.toggle('active');
+        }
+    </script>
+  </body>
+</html>

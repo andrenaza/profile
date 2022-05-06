@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* color: #518aa6; */
+    color: rgb(50, 110, 122);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: url(./imagens/pexels-eduardo-soares-5646318.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid #FFF;
+    margin-bottom: 55px;
+}
+
+#menu-tela-grande{
+    display: flex;
+}
+
+#menu-tela-grande li {
+    padding: 5px;
+    border-right: dashed 2px #FFF;
+}
+
+#menu-tela-grande a {
+    transition: 250ms;
+}
+
+#menu-tela-grande li a:hover {
+    color: #FFF;
+    text-decoration: underline;
+}
+
+#menu-tela-grande li:first-child {
+    border-left: dashed 2px #FFF;
+}
+
+#menu-tela-pequena{
+    display: none;
+    border: none;
+}
+.container {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.container .name h1 {
+    font-size: 50px;
+}
+
+.container .name h5 {
+    font-size: 25px;
+}
+
+#arrow .fas{
+    font-size: 35px;
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+#animation {
+    transition: 300ms;
+}
+
+.active{
+    display: block !important;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+#about p{
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.815);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.form {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.form input {
+    width: 50%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.form input:focus {
+    outline: none;
+}
+
+.form button{
+    width: 15%;
+    padding: 5px 10px;
+    background-color: #518aa6;
+    color: #FFF;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: 250ms;
+    border-radius: 0px 5px 5px 0px;
+    margin-top: 20px;
+    margin-left: -5px;
+}
+
+.form button:hover {
+    background-color: #FFF;
+    color: #518aa6;
+}
+
+@media only screen and (max-width: 915px) {
+    .form{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    #menu-tela-grande {
+        display: none;
+     }
+    #menu-tela-pequena {
+        display: block;
+    }
+
+    .container .name h1 {
+        font-size: 30px;
+    }
+
+    .container .name h5 {
+        font-size: 15px;
+    }
+
+    #about p{
+        max-width: 80%;
+        text-align: justify;
+    }
+}
